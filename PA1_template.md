@@ -49,13 +49,13 @@ g+geom_bar(stat="identity")
 ## Warning: Removed 8 rows containing missing values (position_stack).
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](instructions_fig/unnamed-chunk-3-1.png)
 
 ```r
 hist(tot_step$sum,breaks=61,col="red")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-2.png)
+![plot of chunk unnamed-chunk-3](instructions_fig/unnamed-chunk-3-2.png)
 
 ### Mean and median number of steps taken each day
 
@@ -102,7 +102,7 @@ rownames(interval_step)<-1:dim(interval_step)[1]
 plot(interval_step$interval,interval_step$steps,type="l",col="red")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](instructions_fig/unnamed-chunk-5-1.png)
 
 2 Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with 𝙽𝙰s)
 
@@ -289,13 +289,13 @@ g2<-ggplot(tot_step2,aes(y=sum,x=date))
 g2+geom_bar(stat="identity") 
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10](instructions_fig/unnamed-chunk-10-1.png)
 
 ```r
 hist(tot_step2$sum,col="orange",breaks=61)
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-2.png)
+![plot of chunk unnamed-chunk-10](instructions_fig/unnamed-chunk-10-2.png)
 
 ## Are there differences in activity patterns between weekdays and weekends?
 classify workdays and weekends
@@ -352,5 +352,5 @@ g3<-ggplot(interv_com,aes(interval,steps),colour=factor(weekclass)) + geom_line(
 g3
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-13](instructions_fig/unnamed-chunk-13-1.png)
 
