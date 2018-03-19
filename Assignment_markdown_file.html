@@ -1,6 +1,0 @@
-x<-mtcars$wt/2
-y<-mtcars$mpg
-f<-lm(y~x)
-predict(f,data.frame(x=1),interval="confidence")
-predict(f,data.frame(x=2),interval="confidence")
-
