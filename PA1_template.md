@@ -57,12 +57,22 @@ hist(tot_step$sum,breaks=61,col="red")
 
 ![plot of chunk unnamed-chunk-3](instructions_fig/unnamed-chunk-3-2.png)
 
-### Mean and median number of steps taken each day
+### Mean/ median/max number of steps taken each day
 
 ```r
 dat$date<-ymd(as.vector(dat$date))
 median_step<-tapply(dat$steps,dat$date,median,na.rm=T)
 mean_step<-tapply(dat$steps,dat$date,mean,na.rm=T)
+max_step<-tapply(dat$steps,dat$date,max)
+max_step[which.max(max_step)]
+```
+
+```
+## 2012-11-27 
+##        806
+```
+
+```r
 head(as.data.frame(median_step))
 ```
 
