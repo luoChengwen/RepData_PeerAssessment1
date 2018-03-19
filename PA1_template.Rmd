@@ -3,7 +3,7 @@ title: "Assignment2-markdown"
 author: "Chengwen Luo"
 date: "17/03/2018"
 output: html_document
-keep_md: true 
+keep_md: true
 ---
 
 ## Loading and preprocessing the data
@@ -33,11 +33,14 @@ g+geom_bar(stat="identity")
 hist(tot_step$sum,breaks=61,col="red")
 ```
 
-### Mean and median number of steps taken each day
+### Mean/median/max number of steps taken each day
 ```{r}
 dat$date<-ymd(as.vector(dat$date))
 median_step<-tapply(dat$steps,dat$date,median,na.rm=T)
 mean_step<-tapply(dat$steps,dat$date,mean,na.rm=T)
+max_step<-tapply(dat$steps,dat$date,max)
+maxIndex<-which.max(max_step)
+max_step[maxIndex] 
 head(as.data.frame(median_step))
 head(as.data.frame(mean_step))
 ```
